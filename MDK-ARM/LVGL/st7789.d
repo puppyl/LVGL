@@ -36,3 +36,4 @@ lvgl\st7789.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 lvgl\st7789.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
 lvgl\st7789.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h
 lvgl\st7789.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h
+lvgl\st7789.o: D:\MDK\ARM\ARMCC\Bin\..\include\string.h

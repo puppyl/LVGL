@@ -2,6 +2,7 @@
 "lvgl\startup_stm32h743xx.o"
 "lvgl\main.o"
 "lvgl\gpio.o"
+"lvgl\dma.o"
 "lvgl\spi.o"
 "lvgl\stm32h7xx_it.o"
 "lvgl\stm32h7xx_hal_msp.o"

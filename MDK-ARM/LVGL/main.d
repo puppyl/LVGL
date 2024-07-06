@@ -34,6 +34,7 @@ lvgl\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 lvgl\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
 lvgl\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi.h
 lvgl\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h
+lvgl\main.o: ../Core/Inc/dma.h
 lvgl\main.o: ../Core/Inc/spi.h
 lvgl\main.o: ../Core/Inc/gpio.h
 lvgl\main.o: ../Hardware/ST7789/st7789.h
