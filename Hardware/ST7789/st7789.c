@@ -2,13 +2,13 @@
 
 #ifdef USE_DMA
 #include <string.h>
-uint16_t DMA_MIN_SIZE = 16;
+uint16_t DMA_MIN_SIZE = 32;
 /* If you're using DMA, then u need a "framebuffer" to store datas to be displayed.
  * If your MCU don't have enough RAM, please avoid using DMA(or set 5 to 1).
  * And if your MCU have enough RAM(even larger than full-frame size),
  * Then you can specify the framebuffer size to the full resolution below.
  */
-#define HOR_LEN 5 //	Also mind the resolution of your screen!
+#define HOR_LEN 24 //	Also mind the resolution of your screen!
 uint16_t disp_buf[ST7789_WIDTH * HOR_LEN];
 #endif
 
@@ -191,7 +191,7 @@ void ST7789_Init(void)
 	ST7789_WriteCommand(ST7789_DISPON); //	Main screen turned on
 
 	HAL_Delay(50);
-	ST7789_Fill_Color(BLACK); //	Fill with Black
+	ST7789_Fill_Color(WHITE); //	Fill with Black
 	HAL_GPIO_WritePin(ST7789_BLK_GPIO_Port, ST7789_BLK_Pin, GPIO_PIN_SET);//	Enable BLK
 }
 
@@ -244,6 +244,24 @@ void ST7789_DrawPixel(uint16_t x, uint16_t y, uint16_t color)
 }
 
 /**
+ * @brief Draw a Pixel
+ * @param x&y -> coordinate to Draw
+ * @param color -> color of the Pixel
+ * @return none
+ */
+void Lvgl_ST7789_DrawPixel(uint16_t x, uint16_t y, uint16_t *color)
+{
+	if ((x < 0) || (x >= ST7789_WIDTH) || (y < 0) || (y >= ST7789_HEIGHT))
+	return;
+
+	ST7789_SetAddressWindow(x, y, x, y);
+	uint8_t data[] = {*color >> 8, *color & 0xFF};
+	ST7789_Select();
+	ST7789_WriteData(data, sizeof(data));
+	ST7789_UnSelect();
+}
+
+/**
  * @brief Fill an Area with single color
  * @param xSta&ySta -> coordinate of the start point
  * @param xEnd&yEnd -> coordinate of the end point
@@ -252,8 +270,7 @@ void ST7789_DrawPixel(uint16_t x, uint16_t y, uint16_t color)
  */
 void ST7789_Fill(uint16_t xSta, uint16_t ySta, uint16_t xEnd, uint16_t yEnd, uint16_t color)
 {
-	if ((xEnd < 0) || (xEnd >= ST7789_WIDTH) ||
-		(yEnd < 0) || (yEnd >= ST7789_HEIGHT))
+	if ((xEnd < 0) || (xEnd >= ST7789_WIDTH) || (yEnd < 0) || (yEnd >= ST7789_HEIGHT))
 		return;
 	ST7789_Select();
 	uint16_t i, j;
@@ -266,6 +283,32 @@ void ST7789_Fill(uint16_t xSta, uint16_t ySta, uint16_t xEnd, uint16_t yEnd, uin
 		}
 	ST7789_UnSelect();
 }
+
+/**
+ * @brief Fill an Area with single color
+ * @param xSta&ySta -> coordinate of the start point
+ * @param xEnd&yEnd -> coordinate of the end point
+ * @param color -> color to Fill with
+ * @return none
+ */
+void Lvgl_ST7789_Fill(uint16_t xSta, uint16_t ySta, uint16_t xEnd, uint16_t yEnd, uint16_t *color)
+{
+	if ((xEnd < 0) || (xEnd >= ST7789_WIDTH) || (yEnd < 0) || (yEnd >= ST7789_HEIGHT))
+	return;
+	ST7789_SetAddressWindow(xSta, ySta, xEnd, yEnd);
+	ST7789_Select();
+	uint16_t i, j;
+	for (i = ySta; i <= yEnd; i++)
+		for (j = xSta; j <= xEnd; j++)
+		{
+			uint8_t data[] = {*color >> 8, *color & 0xFF};
+			ST7789_WriteData(data, sizeof(data));
+			color++;
+		}
+	ST7789_UnSelect();
+}
+
+
 
 /**
  * @brief Draw a big Pixel at a point

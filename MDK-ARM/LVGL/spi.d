@@ -1,4 +1,8 @@
 lvgl\spi.o: ../Core/Src/spi.c
+lvgl\spi.o: .\RTE\LVGL\lv_conf_cmsis.h
+lvgl\spi.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+lvgl\spi.o: .\RTE\_LVGL\RTE_Components.h
+lvgl\spi.o: .\RTE\_LVGL\Pre_Include_Global.h
 lvgl\spi.o: ../Core/Inc/spi.h
 lvgl\spi.o: ../Core/Inc/main.h
 lvgl\spi.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
@@ -8,7 +12,6 @@ lvgl\spi.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
 lvgl\spi.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 lvgl\spi.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h
 lvgl\spi.o: ../Drivers/CMSIS/Include/core_cm7.h
-lvgl\spi.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lvgl\spi.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lvgl\spi.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lvgl\spi.o: ../Drivers/CMSIS/Include/cmsis_armcc.h

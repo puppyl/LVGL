@@ -1,4 +1,8 @@
 lvgl\stm32h7xx_hal_msp.o: ../Core/Src/stm32h7xx_hal_msp.c
+lvgl\stm32h7xx_hal_msp.o: .\RTE\LVGL\lv_conf_cmsis.h
+lvgl\stm32h7xx_hal_msp.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+lvgl\stm32h7xx_hal_msp.o: .\RTE\_LVGL\RTE_Components.h
+lvgl\stm32h7xx_hal_msp.o: .\RTE\_LVGL\Pre_Include_Global.h
 lvgl\stm32h7xx_hal_msp.o: ../Core/Inc/main.h
 lvgl\stm32h7xx_hal_msp.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
 lvgl\stm32h7xx_hal_msp.o: ../Core/Inc/stm32h7xx_hal_conf.h
@@ -7,7 +11,6 @@ lvgl\stm32h7xx_hal_msp.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.
 lvgl\stm32h7xx_hal_msp.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 lvgl\stm32h7xx_hal_msp.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h
 lvgl\stm32h7xx_hal_msp.o: ../Drivers/CMSIS/Include/core_cm7.h
-lvgl\stm32h7xx_hal_msp.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lvgl\stm32h7xx_hal_msp.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lvgl\stm32h7xx_hal_msp.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lvgl\stm32h7xx_hal_msp.o: ../Drivers/CMSIS/Include/cmsis_armcc.h

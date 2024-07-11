@@ -1,7 +1,10 @@
 lvgl\st7789.o: ..\Hardware\ST7789\st7789.c
+lvgl\st7789.o: .\RTE\LVGL\lv_conf_cmsis.h
+lvgl\st7789.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+lvgl\st7789.o: .\RTE\_LVGL\RTE_Components.h
+lvgl\st7789.o: .\RTE\_LVGL\Pre_Include_Global.h
 lvgl\st7789.o: ..\Hardware\ST7789\st7789.h
 lvgl\st7789.o: ..\Hardware\ST7789\fonts.h
-lvgl\st7789.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lvgl\st7789.o: ../Core/Inc/main.h
 lvgl\st7789.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
 lvgl\st7789.o: ../Core/Inc/stm32h7xx_hal_conf.h

@@ -1,8 +1,11 @@
 lvgl\system_stm32h7xx.o: ../Core/Src/system_stm32h7xx.c
+lvgl\system_stm32h7xx.o: .\RTE\LVGL\lv_conf_cmsis.h
+lvgl\system_stm32h7xx.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+lvgl\system_stm32h7xx.o: .\RTE\_LVGL\RTE_Components.h
+lvgl\system_stm32h7xx.o: .\RTE\_LVGL\Pre_Include_Global.h
 lvgl\system_stm32h7xx.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 lvgl\system_stm32h7xx.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h
 lvgl\system_stm32h7xx.o: ../Drivers/CMSIS/Include/core_cm7.h
-lvgl\system_stm32h7xx.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lvgl\system_stm32h7xx.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lvgl\system_stm32h7xx.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lvgl\system_stm32h7xx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h

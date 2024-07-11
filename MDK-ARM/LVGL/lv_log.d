@@ -1,0 +1,9 @@
+lvgl\lv_log.o: D:\MDK\ARM\PACK\LVGL\lvgl\8.4.0\src\misc\lv_log.c
+lvgl\lv_log.o: .\RTE\LVGL\lv_conf_cmsis.h
+lvgl\lv_log.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+lvgl\lv_log.o: .\RTE\_LVGL\RTE_Components.h
+lvgl\lv_log.o: .\RTE\_LVGL\Pre_Include_Global.h
+lvgl\lv_log.o: D:\MDK\ARM\PACK\LVGL\lvgl\8.4.0\src\misc\lv_log.h
+lvgl\lv_log.o: D:\MDK\ARM\PACK\LVGL\lvgl\8.4.0\src\misc\../lv_conf_internal.h
+lvgl\lv_log.o: D:\MDK\ARM\PACK\LVGL\lvgl\8.4.0\src\misc\../lv_conf_kconfig.h
+lvgl\lv_log.o: D:\MDK\ARM\PACK\LVGL\lvgl\8.4.0\src\misc\lv_types.h

@@ -1,4 +1,8 @@
 lvgl\gpio.o: ../Core/Src/gpio.c
+lvgl\gpio.o: .\RTE\LVGL\lv_conf_cmsis.h
+lvgl\gpio.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+lvgl\gpio.o: .\RTE\_LVGL\RTE_Components.h
+lvgl\gpio.o: .\RTE\_LVGL\Pre_Include_Global.h
 lvgl\gpio.o: ../Core/Inc/gpio.h
 lvgl\gpio.o: ../Core/Inc/main.h
 lvgl\gpio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
@@ -8,7 +12,6 @@ lvgl\gpio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
 lvgl\gpio.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 lvgl\gpio.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h
 lvgl\gpio.o: ../Drivers/CMSIS/Include/core_cm7.h
-lvgl\gpio.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
 lvgl\gpio.o: ../Drivers/CMSIS/Include/cmsis_version.h
 lvgl\gpio.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 lvgl\gpio.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
